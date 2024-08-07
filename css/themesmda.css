@@ -1,109 +1,261 @@
-html {
-    font-size: 62.5%;
-    /*10px * 62.5 = 10*/
+@import url(./reset.css);
 
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-.banner{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(../asset/laptop.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+/*Entete*/
+header{
+    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    width: 50px;
-    cursor: pointer;
-}
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 2px;
-    position: relative;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-.navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 50%;
-    bottom: -8px;
-    transform: translate(-50%, -50%);
-    transition: 0.3s;
-}
-.navbar ul li:hover::after{
+    border-bottom: solid .1rem rgb(16, 16, 230);
+    background-color: #fff;
+    z-index: 100;
     width: 100%;
-}
-.content{
-   width: 100%; 
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   text-align: center;
-   color: #fff;
-
+    top: 0;
 }
 
-.content h1{
-    font-size: 5rem;
-    margin-top: 80px;
-}
-.content p{
-    margin: 20px auto;
-    font-weight: bold;
-    line-height: 15px;
-    font-size: 1.3rem;
-}
-button{
-    width: 200px;
-    padding: 15px 0;
+h1{
+    position: relative;
+    color: rgb(16, 16, 230);
     text-align: center;
-    margin: 20px 10px;
-    font-weight: bold;
-    border-radius: 25px;
-    border: 2px solid #009688;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    font-weight: 500;
+    line-height: 3.5rem;
+    font-size: 3rem;
 }
-span{
-    background: #009688;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.5s;
-}
-button:hover span{
-    width: 100%;
+h1 span{
+    color: rgb(228, 57, 57);
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
 }
 
-button:hover{
-    border: none;
+.logo{
+    width: 150px;
+    left: 10px;
+}
+
+.logo img{
+    width: 120px;
+}
+
+/*La navigation bar*/
+.navbar{
+    position: absolute;
+    max-width: 960px;
+    right: 30px;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 20px;
+
+}
+
+.navbar ul a{
+    color: #000;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.navbar ul a:hover{
+    color: rgb(96, 96, 230);
+    transition: .3s ease-in-out;
+}
+
+main{
+    margin-top: 100px;
+}
+
+/*Section banière*/
+
+section .baniere{
+    width: 100%;
+    height: 400px;
+}
+
+section .baniere img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.welcome{
+    position: absolute;
+    top: 350px;
+    margin: auto 100px;
+}
+
+.welcome h2{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.welcome p{
+    color: #fff;
+    font-weight: 400;
+}
+
+/*La section Actualités*/
+.actualites{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.actualites h2{
+    background-color: rgb(96, 96, 230);
+    font-weight: 500;
+    color: #fff;
+    padding: 5px;
+    margin-right: 79%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.les-actualites{
+    margin: auto 40px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 50px;
+    justify-content: center;
+}
+
+.les-actualites .actu{
+    padding: 10px;
+}
+
+.les-actualites .actu .image{
+    width: 350px;
+    height: 200px;
+}
+
+.les-actualites .actu .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.baniere-actu{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.baniere-actu img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.contenu-img{
+    position: absolute;
+    top:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(25%, 50%);
+
+}
+
+.contenu-img .bg-competition{
+    width: 45%;
+    background-color: rgb(248, 94, 94);
+    opacity: .8;
+    padding: 3px;
+}
+.contenu-img .bg-competition h3{
+    color: #fff;
+    text-align: center;
+}
+
+.contenu-img .bg-competition h3 span{
+    font-weight: 200;
+}
+
+.contenu-img p{
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.contenu-img p span{
+    font-size: 4rem;
+}
+
+
+/* CONTACTS */
+.contacts{
+    background-color: rgb(96, 96, 230);
+    padding-top: 10px;
+}
+
+.contacts .contenu-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.contacts h2{
+    color: #fff;
+    text-align: center;
+}
+.contacts .contenu-contact p{
+    color: #fff;
+    text-align: center;
+}
+
+.contacts .contenu-contact .contact-icons img{
+    width: 40px;
+    margin: 10px;
+}
+.line{
+    display: flex;
+    content: "";
+    margin: 20px auto;
+    width: 100px;
+    height: 3px;
+    justify-content: center;
+    background: #fff;
+    
+}
+
+.contact-icons a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Pied de page */ 
+footer{
+    background-color: rgb(96, 96, 230);
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    
+}
+footer .footer-contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer p{
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    border-top: #fff solid .1rem;
+    font-size: 1.5rem;
+}
+
+/*les media queries*/
+
+@media screen and (max-width: 1080px) {
+
 }

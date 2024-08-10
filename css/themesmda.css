@@ -7,7 +7,7 @@ header{
     align-items: center;
     border-bottom: solid .1rem rgb(16, 16, 230);
     background-color: #fff;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
     top: 0;
 }
@@ -98,6 +98,7 @@ section .baniere img{
 .actualites{
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .actualites h2{
@@ -121,6 +122,9 @@ section .baniere img{
 
 .les-actualites .actu{
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
 }
 
 .les-actualites .actu .image{
@@ -148,18 +152,17 @@ section .baniere img{
 }
 
 .contenu-img{
+    width: 100%;
     position: absolute;
     top:10%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transform: translate(25%, 50%);
-
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contenu-img .bg-competition{
-    width: 45%;
+    width: 30%;
     background-color: rgb(248, 94, 94);
     opacity: .8;
     padding: 3px;
@@ -234,7 +237,7 @@ section .baniere img{
 footer{
     background-color: rgb(96, 96, 230);
     width: 100%;
-    padding-top: 50px;
+    padding-top: 10px;
     padding-bottom: 10px;
     
 }
@@ -256,6 +259,57 @@ footer p{
 
 /*les media queries*/
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1192px) {
+    .navbar, h1{
+        display: none;
+    }
 
+    .welcome h2{
+        font-size: 2rem;
+    }
+
+    .welcome p{
+        font-weight: 200;
+        font-size: 1.4rem;
+    }
+
+    .welcome{
+        margin: auto 20px;
+    }
+
+    .actualites h2{
+        margin-right: 50%;
+    }
+
+    .contenu-img .bg-competition h3{
+        font-size: 1rem;
+    }
+
+    .les-actualites .actu{
+        width: 800px;
+    }
+
+    .les-actualites{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    .les-actualites .actu .image{
+        width: 700px;
+        height: 400px;
+    }
+
+    .contenu-img p{
+        font-size: 3.5rem;
+    }
+
+    .contenu-img p span{
+        font-size: 2.5rem;
+    }
+
+    .contacts .contenu-contact p{
+        font-size: 1rem;
+    }
 }

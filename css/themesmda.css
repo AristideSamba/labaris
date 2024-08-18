@@ -80,7 +80,7 @@ section .baniere img{
 
 .welcome{
     position: absolute;
-    top: 350px;
+    top: 300px;
     margin: auto 100px;
 }
 
@@ -98,7 +98,7 @@ section .baniere img{
 .actualites{
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .actualites h2{
@@ -106,14 +106,13 @@ section .baniere img{
     font-weight: 500;
     color: #fff;
     padding: 5px;
-    margin-right: 79%;
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
 .les-actualites{
-    margin: auto 40px;
+    margin: auto;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     gap: 50px;
@@ -124,7 +123,8 @@ section .baniere img{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 350px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .les-actualites .actu .image{
@@ -278,7 +278,7 @@ footer p{
     }
 
     .actualites h2{
-        margin-right: 50%;
+       
     }
 
     .contenu-img .bg-competition h3{
@@ -286,20 +286,22 @@ footer p{
     }
 
     .les-actualites .actu{
-        width: 800px;
+        max-width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .les-actualites .actu .image{
+        width: 100%;
+        height: 200px;
     }
 
     .les-actualites{
         display: flex;
         flex-direction: column;
-        margin-right: 20%;
-        margin-left: 20%;
+        margin: auto;
     }
 
-    .les-actualites .actu .image{
-        width: 700px;
-        height: 400px;
-    }
 
     .contenu-img p{
         font-size: 3.5rem;
@@ -311,5 +313,14 @@ footer p{
 
     .contacts .contenu-contact p{
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+   
+
+    .les-actualites .actu {
+       
+
     }
 }
